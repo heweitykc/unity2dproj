@@ -15,9 +15,7 @@ public class HealthScript : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter2D(Collider2D collider)
-	{
-		Debug.Log("123");
+	void OnTriggerEnter2D(Collider2D collider){
 		ShotScript shot = collider.gameObject.GetComponent<ShotScript> ();
 		if (shot.isEnemyShot != isEnemy) {
 			hp -= shot.damage;

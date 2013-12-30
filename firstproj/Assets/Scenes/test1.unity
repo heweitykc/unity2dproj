@@ -435,7 +435,7 @@ Transform:
   m_PrefabInternal: {fileID: 1807350497}
   m_GameObject: {fileID: 657985754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.94797039, y: .206505775, z: 0}
+  m_LocalPosition: {x: -5.80222273, y: 3.09233999, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 1097832036}
@@ -762,7 +762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b4e5843eeb3b5c0419660b8dee34cc85, type: 2}
       propertyPath: hp
-      value: 12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: b4e5843eeb3b5c0419660b8dee34cc85, type: 2}
       propertyPath: m_Enabled
@@ -770,6 +770,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: b4e5843eeb3b5c0419660b8dee34cc85, type: 2}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b4e5843eeb3b5c0419660b8dee34cc85, type: 2}
+      propertyPath: speed.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: b4e5843eeb3b5c0419660b8dee34cc85, type: 2}
+      propertyPath: speed.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -818,6 +826,8 @@ GameObject:
   - 61: {fileID: 1774159260}
   - 114: {fileID: 1774159261}
   - 114: {fileID: 1774159262}
+  - 114: {fileID: 1774159263}
+  - 114: {fileID: 1774159264}
   m_Layer: 0
   m_Name: poulpi
   m_TagString: Untagged
@@ -900,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cbfa1e09f3cde43a229eb9417b5ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 10, y: 10}
+  speed: {x: 1, y: 1}
   direction: {x: -1, y: 0}
 --- !u!114 &1774159262
 MonoBehaviour:
@@ -914,8 +924,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df041ee596346e14e8396369fd4b465c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 12
+  hp: 1
   isEnemy: 1
+--- !u!114 &1774159263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774159256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aaad17b0a7efe14dbccd304470217f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1774159264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774159256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a542e84d31be42f46be50572d76876db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 400000, guid: c72cbe8a7d120e947a5e715bfc2797c6, type: 2}
+  shootingRate: .25
 --- !u!1001 &1807350497
 Prefab:
   m_ObjectHideFlags: 0
@@ -925,11 +959,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 2dd16706ae8d1e24ca57f6c77b746e68, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.94797039
+      value: -5.80222273
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2dd16706ae8d1e24ca57f6c77b746e68, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .206505775
+      value: 3.09233999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2dd16706ae8d1e24ca57f6c77b746e68, type: 2}
       propertyPath: m_LocalPosition.z
