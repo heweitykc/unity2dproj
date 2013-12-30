@@ -7,7 +7,7 @@ public class HealthScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -17,6 +17,7 @@ public class HealthScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
+		Debug.Log("123");
 		ShotScript shot = collider.gameObject.GetComponent<ShotScript> ();
 		if (shot.isEnemyShot != isEnemy) {
 			hp -= shot.damage;
@@ -24,6 +25,7 @@ public class HealthScript : MonoBehaviour {
 			if(hp<=0){
 				Destroy(gameObject);
 			}
+			
 		}
 	}
 }
