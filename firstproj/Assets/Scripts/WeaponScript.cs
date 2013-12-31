@@ -33,13 +33,10 @@ public class WeaponScript : MonoBehaviour {
 			var shotTransform = Instantiate(shotPrefab) as Transform;
 			shotTransform.position = transform.position;
 			ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
-			if(shot != null){
-				shot.isEnemyShot = isEnemy;
-			}
+			shot.isEnemyShot = isEnemy;
+
 			MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
-			if(move != null){
-				move.direction = this.transform.right;
-			}
+			move.direction = this.transform.right;
 		}
 	}
 }
