@@ -17,13 +17,14 @@ public class HealthScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider){
 		ShotScript shot = collider.gameObject.GetComponent<ShotScript> ();
+		if(shot == null) return;
 		if (shot.isEnemyShot != isEnemy) {
 			hp -= shot.damage;
 			Destroy(shot.gameObject);
+			Debug.Log("hp="+hp);
 			if(hp<=0){
 				Destroy(gameObject);
 			}
-			
 		}
 	}
 }
